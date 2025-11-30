@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./ContactCenter.css";
+import "./Contactcenter.css";
 import avatarImg from "/images/img.png";
 import { useTeam } from "./Teamcontext";
 
