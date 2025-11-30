@@ -1,0 +1,189 @@
+.analytics-container {
+  margin-left: 110px;
+  padding: 40px 40px;
+  font-family: "Inter", sans-serif;
+  background: #ffffff;
+  color: #000000;
+}
+.analytics-container h2 {
+  margin-bottom: 50px;
+}
+
+.missed-chats h3,
+.average-reply h3,
+.resolved-tickets h3,
+.total-chats h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.missed-chats h3,
+.average-reply h3,
+.resolved-tickets h3 {
+  color: #00d907;
+}
+
+.total-chats h3 {
+  color: #000;
+}
+
+.missed-chats,
+.average-reply,
+.resolved-tickets,
+.total-chats {
+  margin-bottom: 55px;
+}
+
+.reply-info p,
+.ticket-info p,
+.chat-info p {
+  max-width: 620px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #000000;
+}
+
+.reply-info,
+.ticket-info,
+.chat-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.time,
+.total-number {
+  font-size: 22px;
+  font-weight: 600;
+  color: #00d907;
+  white-space: nowrap;
+}
+
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #efefef !important;
+  stroke-dasharray: 3 3 !important;
+}
+
+.recharts-cartesian-axis-line,
+.recharts-cartesian-axis-tick-line {
+  display: none !important;
+}
+
+.recharts-cartesian-axis-tick text {
+  fill: #666 !important;
+  font-size: 12px !important;
+}
+
+.recharts-default-tooltip {
+  background: #000 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+}
+
+.recharts-tooltip-label {
+  display: none !important;
+}
+
+.recharts-tooltip-item {
+  color: #fff !important;
+}
+
+.recharts-tooltip-cursor {
+  stroke: #000 !important;
+  stroke-dasharray: 4 4 !important;
+}
+
+.missed-chats .recharts-responsive-container {
+  padding-top: 20px;
+}
+
+.progress-ring {
+  width: 120px;
+  height: 120px;
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 1px #ebebeb;
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+}
+
+.progress-circle .background {
+  fill: none;
+  stroke: #e6e6e6;
+  stroke-width: 10;
+}
+
+.progress-circle .progress {
+  fill: none;
+  stroke: #00d907;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 251;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.progress-circle text {
+  font-size: 18px;
+  font-weight: 600;
+  fill: #000;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+/* 📱 MOBILE RESPONSIVE FIX FOR ANALYTICS */
+@media (max-width: 768px) {
+  .analytics-container {
+    margin-left: 100px;
+    padding: 20px !important;
+  }
+
+  .reply-info,
+  .ticket-info,
+  .chat-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .missed-chats,
+  .average-reply,
+  .resolved-tickets,
+  .total-chats {
+    margin-bottom: 35px;
+  }
+
+  .time,
+  .total-number {
+    font-size: 18px;
+  }
+
+  .progress-ring {
+    width: 100px;
+    height: 100px;
+  }
+
+  .progress-circle text {
+    font-size: 14px;
+  }
+}
+
+/* 📱 VERY SMALL SCREEN FIX */
+@media (max-width: 480px) {
+  .analytics-container {
+    padding: 16px !important;
+  }
+
+  .reply-info p,
+  .ticket-info p,
+  .chat-info p {
+    font-size: 12px;
+  }
+}

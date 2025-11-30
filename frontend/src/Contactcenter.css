@@ -1,0 +1,251 @@
+/* ========== LAYOUT ========== */
+.cc-container {
+  display: flex;
+  height: 100vh;
+  background: #f7faff;
+  font-family: "Inter", sans-serif;
+  color: #6A6B70;
+  padding-left: 90px; /* space for sidebar */
+}
+
+/* LEFT SIDEBAR */
+.cc-left {
+  width: 260px;
+  border-right: 1px solid #e5e7eb;
+  padding: 22px;
+  background: #fff;
+}
+
+.cc-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cc-chats-title {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #6A6B70;
+}
+
+.cc-chat-list {
+  margin-top: 15px;
+}
+
+.cc-chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: 0.2s ease;
+}
+
+.cc-chat-item.active {
+  background: #e8f0ff;
+}
+
+.cc-chat-item:hover {
+  background: #f1f5f9;
+}
+
+.cc-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* ========== MIDDLE SECTION ========== */
+.cc-middle {
+  flex: 1;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cc-ticket-header {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cc-messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.cc-message-block {
+  margin-bottom: 28px;
+}
+
+.cc-msg-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.cc-date {
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: #6A6B70;
+}
+
+.cc-msg-name {
+  font-weight: bold;
+}
+
+.cc-msg-text {
+  font-size: 14px;
+  color: #6A6B70;
+  margin-top: 2px;
+}
+
+/* INPUT AREA */
+.cc-input-box {
+  display: flex;
+  padding: 14px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cc-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+  outline: none;
+  font-size: 14px;
+}
+
+.cc-send-btn {
+  margin-left: 10px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ========== RIGHT SIDEBAR ========== */
+.cc-right {
+  width: 310px;
+  padding: 22px;
+  border-left: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.cc-avatar-large {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.cc-right-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cc-right-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.cc-field {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  outline: none;
+}
+
+/* ========== TEAMMATE DROPDOWN ========== */
+
+.cc-team-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cc-team-selected {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cc-team-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+/* Dropdown list box */
+.cc-team-dropdown {
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-top: 8px;
+  overflow: hidden;
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 0.15s ease;
+}
+
+.cc-team-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  cursor: pointer;
+  background: white;
+  transition: 0.15s ease;
+}
+
+.cc-team-option:hover {
+  background: #f0f4ff;
+}
+
+/* ========== STATUS DROPDOWN ========== */
+.cc-dropdown {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  margin-top: 6px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .cc-container {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cc-container {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+}
+
+/* Small mobile */
+@media (max-width: 600px) {
+  .cc-container {
+    margin-left: 0px !important;  /* sidebar auto collapsed */
+    width: 100% !important;
+    flex-direction: column;
+  }
+}

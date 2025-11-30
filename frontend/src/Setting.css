@@ -1,0 +1,154 @@
+/* =============================== */
+/*        SETTINGS PAGE BASE       */
+/* =============================== */
+
+.setting-container {
+  margin-left: 120px;         /* Desktop sidebar space */
+  padding: 20px 60px 40px 20px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+/* =============================== */
+/*             TITLES              */
+/* =============================== */
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.setting-header {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.setting-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  border-bottom: 2px solid #1d4ed8;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* =============================== */
+/*             FORM                */
+/* =============================== */
+
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =============================== */
+/*            SAVE BUTTON          */
+/* =============================== */
+
+.save-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.save-button {
+  background-color: #164e91;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Remove the huge space */
+.setting3 {
+  margin-top: 50px;
+}
+
+
+
+/* Tablet screens */
+@media (max-width: 900px) {
+  .setting-container {
+    margin-left: 90px;
+    padding: 20px 30px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .setting-container {
+    margin-left: 90px;
+    padding: 20px !important;
+  }
+
+  .page-title {
+    font-size: 26px;
+  }
+
+  .setting-header h2 {
+    font-size: 20px;
+  }
+
+  .edit-profile-form {
+    max-width: 100%;
+  }
+
+  .save-button-wrapper {
+    justify-content: center;   /* Center save button */
+  }
+
+  .save-button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 15px;
+  }
+}
+
+/* Very small screens (iPhone SE) */
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 22px;
+  }
+
+  .setting-header h2 {
+    font-size: 18px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

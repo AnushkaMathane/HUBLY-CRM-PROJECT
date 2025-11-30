@@ -1,0 +1,169 @@
+/* ===================================== */
+/*        DESKTOP SIDEBAR (DEFAULT)      */
+/* ===================================== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+.logo23 img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sidebar-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #666;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.icon {
+  color: #4b5563;
+  font-size: 26px;
+  transition: 0.25s ease;
+}
+
+.label {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.sidebar-link.active {
+  background: #e0e7ff;
+  color: #2d4ce0;
+}
+
+.sidebar-link.active .icon {
+  color: #2d4ce0;
+}
+
+.bottom-section {
+  margin-bottom: 20px;
+}
+
+.profile-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+/* =========================================================== */
+/*               RESPONSIVE - TABLETS  (<= 1024px)             */
+/* =========================================================== */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 80px;
+  }
+  .logo23 img {
+    width: 42px;
+    height: 42px;
+  }
+  .icon {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================== */
+/*               RESPONSIVE - MOBILE  (<= 768px)               */
+/* =========================================================== */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 65px;
+    padding: 15px 0;
+  }
+
+  .logo23 img {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* Hide all labels on mobile for clean UI */
+  .label {
+    display: none !important;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+
+  .profile-icon {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* =========================================================== */
+/*        RESPONSIVE - SMALL MOBILE  (<= 480px / iPhone)       */
+/* =========================================================== */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 58px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .logo23 img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* =========================================================== */
+/*       RESPONSIVE - EXTRA SMALL (<= 360px Android phones)    */
+/* =========================================================== */
+@media (max-width: 360px) {
+  .sidebar {
+    width: 52px;
+    padding: 10px 0;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .profile-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
